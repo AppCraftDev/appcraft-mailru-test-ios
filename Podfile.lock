@@ -1,0 +1,40 @@
+PODS:
+  - GKCoreData (1.0.5):
+    - GKExtensions (~> 1.1.0)
+  - GKExtensions (1.1.0)
+  - GKNetwork (1.1.2):
+    - GKExtensions (~> 1.1.0)
+  - GKRepresentable (1.0.1):
+    - GKExtensions (~> 1.1.0)
+  - GKUseCase (1.0.2):
+    - GKCoreData (~> 1.0.5)
+    - GKExtensions (~> 1.1.0)
+    - GKNetwork (~> 1.1.0)
+  - GKViper (1.0.0):
+    - GKExtensions (~> 1.1.0)
+
+DEPENDENCIES:
+  - GKRepresentable (~> 1.0.1)
+  - GKUseCase (~> 1.0.1)
+  - GKViper (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - GKCoreData
+    - GKExtensions
+    - GKNetwork
+    - GKRepresentable
+    - GKUseCase
+    - GKViper
+
+SPEC CHECKSUMS:
+  GKCoreData: c9d4315c9d425bac1dca8448f3ffac0d13c3644b
+  GKExtensions: e2336b4ae2a62bfc968fd1a4ced30365ffb3f73b
+  GKNetwork: b2e0500499c6a82a32fa7fa07b4c8083d15d4395
+  GKRepresentable: 6dcaa093a142604c5f2caa24a3839512331aa2eb
+  GKUseCase: bd50df4ff25a454fdbefff54a7367b799d699c4c
+  GKViper: 1ffe86f32753c4fc834c1325ee1892806c9ff1aa
+
+PODFILE CHECKSUM: 628b0f13426ccb4ff1b50afeed71fb9aaf29852d
+
+COCOAPODS: 1.10.0
