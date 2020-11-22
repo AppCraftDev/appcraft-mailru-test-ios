@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  Arcana
+
+  Created by  Кирилл on 10/26/19.
+  Copyright © 2019 AppCraft. All rights reserved.
+*/
+
+// MARK: - Common
+"OK"            = "OK";
+"SAVE"          = "Save";
+"CANCEL"        = "Cancel";
+"CLOSE"         = "Close";
+"ATTENSION"     = "Attention!";
+"UNKNOWN"       = "Unknown";
+"LOADING"       = "Loading";
+"REFRESH"       = "Refresh";
+"TRY_AGAIN"     = "Try Again";
+"YES"           = "Yes";
+"NO"            = "No";
+"ERROR"         = "Error";
+"WARNING"       = "Warning";
+"CONTINUE"      = "Continue";
+"SEARCH"        = "Search";
+"NEXT"          = "Next";
+
+// MARK: - Themes and languages
+"APP_THEME_DARK"    = "Dark";
+"APP_LANG_ENG"      = "English";
+"APP_LANG_RUS"      = "Russian";
+
+// MARK: - Initial
+"inital_title" = "Mailru Test Ios";
+
+// MARK: - ContactList
+"contact_list_nav_title" = "Contacts";
+
+// MARK: - ContactsEmpty
+"contacts_empty_message" = "It's a pity, but you don't have any contacts 😔 Add a couple and refresh the screen 😉";
+"contacts_empty_btn_title" = "Refresh";
+
+// MARK: - ContactsAccessDenied
+"contacts_access_denied_message" = "The application does not have access to your contacts 😔 You can change this in the settings 😉";
+"contacts_access_denied_btn_title" = "Open Settings";
