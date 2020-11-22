@@ -10,4 +10,10 @@ import GKViper
 
 class DetailContactViewModel: ViperViewModel {
     
+    let contact: ContactModel
+    
+    init(contact: ContactModel) {
+        self.contact = contact
+    }
+    
 }

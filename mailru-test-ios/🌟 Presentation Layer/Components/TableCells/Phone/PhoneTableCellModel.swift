@@ -1,31 +1,31 @@
 //
-//  ContactListTableCellModel.swift
+//  PhoneTableCellModel.swift
 //  mailru-test-ios
 //
-//  Created by Дмитрий Поляков on 21.11.2020.
+//  Created by Дмитрий Поляков on 22.11.2020.
 //  Copyright © 2020 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 import GKRepresentable
 
-class ContactListTableCellModel: TableCellModel {
+class PhoneTableCellModel: TableCellModel {
 
     // MARK: - Override
     public override var cellIdentifier: String {
-        ContactListTableCell.identifier
+        PhoneTableCell.identifier
     }
     
     // MARK: - Props
-    let contact: ContactModel
+    let phone: String
     
     // MARK: - Init
-    init(contact: ContactModel) {
-        self.contact = contact
+    init(phone: String) {
+        self.phone = phone
     }
     
     // MARK: - Handler
-    typealias ActionHandler = (_ cell: ContactListTableCell, _ action: Action) -> Void
+    typealias ActionHandler = (_ cell: PhoneTableCell, _ action: Action) -> Void
     
     enum Action {}
     

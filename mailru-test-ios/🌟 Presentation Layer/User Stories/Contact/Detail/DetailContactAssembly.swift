@@ -12,12 +12,12 @@ enum DetailContactAssembly {
     
     // Create and return controller
     static func create() -> DetailContactViewController {
-        return DetailContactViewController(nibName: DetailContactViewController.identifier, bundle: nil)
+        DetailContactViewController()
     }
     
     // Create and link modules with controller, return presenter input
-    static func configure(with reference: DetailContactViewController) -> DetailContactPresenterInput {
-        let presenter = DetailContactPresenter()
+    static func configure(with reference: DetailContactViewController, contact: ContactModel) -> DetailContactPresenterInput {
+        let presenter = DetailContactPresenter(contact: contact)
         
         let router = DetailContactRouter()
         router._mainController = reference

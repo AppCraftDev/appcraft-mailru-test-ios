@@ -46,4 +46,14 @@ enum AppLocalization {
         case navTitle = "contact_list_nav_title"
     }
     
+    enum ContactsEmpty: String, Localizable {
+        case message = "contacts_empty_message"
+        case btnTitle = "contacts_empty_btn_title"
+    }
+    
+    enum ContactsAccessDenied: String, Localizable {
+        case message = "contacts_access_denied_message"
+        case btnTitle = "contacts_access_denied_btn_title"
+    }
+    
 }

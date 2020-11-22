@@ -16,6 +16,7 @@ protocol ListContactUseCaseInput: UseCaseInput {
 
 protocol ListContactUseCaseOutput: UseCaseOutput {
     func error(useCase: ListContactUseCase, error: Error?)
+    func errorNotAccess(useCase: ListContactUseCase)
     func provideFetch(useCase: ListContactUseCase, contacts: [ContactModel])
 }
 
@@ -34,37 +35,57 @@ class ListContactUseCase: UseCase, ListContactUseCaseInput {
         let store = CNContactStore()
         store.requestAccess(for: .contacts) { [weak self] access, error in
             guard let self = self else { return }
-            guard access, error == nil else {
+            
+            guard access else {
+                self.output?.errorNotAccess(useCase: self)
+                return
+            }
+            
+            guard error == nil else {
                 self.output?.error(useCase: self, error: error)
                 return
             }
             
-            let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
-            let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-            
-            let predicate = CNContact.predicateForContactsInContainer(withIdentifier: store.defaultContainerIdentifier())
-            let keysToFetch = [
-                CNContactIdentifierKey,
-                CNContactGivenNameKey,
-                CNContactFamilyNameKey,
-                CNContactImageDataKey,
-                CNContactThumbnailImageDataKey,
-                CNContactImageDataAvailableKey
-            ] as [CNKeyDescriptor]
-            
-            do {
-                // 3.
-//                try store.enumerateContacts(with: request, usingBlock: { [weak self] contact, stopPointer in
-////                    self.contacts.append(FetchedContact(firstName: contact.givenName, lastName: contact.familyName, telephone: contact.phoneNumbers.first?.value.stringValue ?? ""))
-//                })
-                
-                let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
-                let contactModels = contacts.map({ ContactModel(contact: $0) })
+            self._fetch { [weak self] result, error in
+                guard let self = self else { return }
+                guard error == nil else {
+                    self.output?.error(useCase: self, error: error)
+                    return
+                }
+                let contactModels = result.map({ ContactModel(contact: $0) })
                 self.output?.provideFetch(useCase: self, contacts: contactModels)
-            } catch let error {
-                self.output?.error(useCase: self, error: error)
             }
         }
+    }
+    
+    func _fetch(completion: ([CNContact], Error?) -> Void) {
+        let contactStore = CNContactStore()
+        let keysToFetch = [
+            CNContactIdentifierKey,
+            CNContactGivenNameKey,
+            CNContactFamilyNameKey,
+            CNContactImageDataKey,
+            CNContactThumbnailImageDataKey,
+            CNContactImageDataAvailableKey,
+            CNContactPhoneNumbersKey
+        ] as [CNKeyDescriptor]
+        
+        var contacts: [CNContact] = []
+        
+        let allContainers = (try? contactStore.containers(matching: nil)) ?? []
+        allContainers.forEach({ container in
+            let fetchPredicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
+            let containerResults = (try? contactStore.unifiedContacts(matching: fetchPredicate, keysToFetch: keysToFetch)) ?? []
+            contacts.append(contentsOf: containerResults)
+        })
+        
+        var contactsUnique: [CNContact] = []
+        contacts.forEach({ contact in
+            if !contactsUnique.contains(contact) {
+                contactsUnique.append(contact)
+            }
+        })
+        completion(contactsUnique, nil)
     }
     
 }

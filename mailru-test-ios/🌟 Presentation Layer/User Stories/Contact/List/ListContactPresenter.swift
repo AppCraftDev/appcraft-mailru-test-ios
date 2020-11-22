@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import GKRepresentable
 
 protocol ListContactPresenterInput: ViperPresenterInput { }
 
@@ -43,11 +44,21 @@ class ListContactPresenter: ViperPresenter, ListContactPresenterInput, ListConta
     // MARK: - ListContactViewOutput
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
+        self.beginLoading()
         self.reloadData()
     }
     
     override func reloadData() {
         self.listContactUseCase.fetch()
+    }
+    
+    func didSelectRow(_ row: TableCellModel) {
+        guard let model = row as? ContactListTableCellModel else { return }
+        self.router?.showDetailContact(contact: model.contact)
+    }
+    
+    func beginRefresh() {
+        self.reloadData()
     }
         
     // MARK: - Module functions
@@ -60,8 +71,32 @@ extension ListContactPresenter: ListContactUseCaseOutput {
         self.finishLoading(with: error)
     }
     
+    func errorNotAccess(useCase: ListContactUseCase) {
+        DispatchQueue.main.async { [weak self] in
+            self?.view?.reloadData(with: [])
+            self?.view?.setEmptyView(with: .contactsAccessDenied(tapBt: {
+                guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }))
+            self?.finishLoading(with: nil)
+        }
+    }
+    
     func provideFetch(useCase: ListContactUseCase, contacts: [ContactModel]) {
-        print(contacts)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
+            let rows = contacts.map({ ContactListTableCellModel(contact: $0) })
+            self?.view?.reloadData(with: rows)
+            self?.view?.setEmptyView(with: nil)
+            
+            if rows.isEmpty {
+                self?.view?.setEmptyView(with: .contactsEmpty(tapBt: { [weak self] in
+                    self?.beginLoading()
+                    self?.reloadData()
+                }))
+            }
+            
+            self?.finishLoading(with: nil)
+        }
     }
     
 }

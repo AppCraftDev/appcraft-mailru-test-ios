@@ -8,7 +8,9 @@
 
 import GKViper
 
-protocol ListContactRouterInput: ViperRouterInput { }
+protocol ListContactRouterInput: ViperRouterInput {
+    func showDetailContact(contact: ContactModel)
+}
 
 class ListContactRouter: ViperRouter, ListContactRouterInput {
     
@@ -21,6 +23,11 @@ class ListContactRouter: ViperRouter, ListContactRouterInput {
     }
     
     // MARK: - ListContactRouterInput
+    func showDetailContact(contact: ContactModel) {
+        let vc = DetailContactAssembly.create()
+        _ = DetailContactAssembly.configure(with: vc, contact: contact)
+        self.push(to: vc, animated: true)
+    }
     
     // MARK: - Module functions
 }

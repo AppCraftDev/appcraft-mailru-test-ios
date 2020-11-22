@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import GKRepresentable
 
 protocol DetailContactPresenterInput: ViperPresenterInput { }
 
@@ -30,8 +31,8 @@ class DetailContactPresenter: ViperPresenter, DetailContactPresenterInput, Detai
     var viewModel: DetailContactViewModel
     
     // MARK: - Initialization
-    override init() {
-        self.viewModel = DetailContactViewModel()
+    init(contact: ContactModel) {
+        self.viewModel = DetailContactViewModel(contact: contact)
     }
     
     // MARK: - DetailContactPresenterInput
@@ -39,6 +40,15 @@ class DetailContactPresenter: ViperPresenter, DetailContactPresenterInput, Detai
     // MARK: - DetailContactViewOutput
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
+        
+        let rows = self.viewModel.contact.phones.map({ PhoneTableCellModel(phone: $0) })
+        self.view?.reloadData(with: rows)
+    }
+    
+    func didSelectRow(_ row: TableCellModel) {
+        guard let model = row as? PhoneTableCellModel else { return }
+        guard let url = URL(string: "tel://\(model.phone.replace(["(", ")", "+", " ", "-"], with: ""))") else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
         
     // MARK: - Module functions

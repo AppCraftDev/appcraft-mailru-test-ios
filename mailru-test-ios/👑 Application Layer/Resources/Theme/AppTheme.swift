@@ -21,8 +21,9 @@ enum AppTheme {
     // MARK: - Window background color
     /// hex F0F0F0
     public static var backgroundMain: UIColor {
-        switch AppThemeManager.current.type {
-        case .dark:
+        if #available(iOS 13.0, *) {
+            return .systemBackground
+        } else {
             return .white
         }
     }
@@ -67,19 +68,31 @@ enum AppTheme {
 
     // MARK: - Text colors
     public static var textMain: UIColor {
-        switch AppThemeManager.current.type {
-        case .dark:
-            return .darkText
+        if #available(iOS 13.0, *) {
+            return .label
+        } else {
+            return .black
         }
     }
     
     public static var textSub: UIColor {
+        if #available(iOS 13.0, *) {
+            return .secondaryLabel
+        } else {
+            return .gray
+        }
+    }
+    
+    public static var textAccent: UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return .lightText
+            return .systemBlue
         }
     }
     
     // MARK: - Typography
     public static let h1 = UIFont.systemFont(ofSize: 30, weight: .bold)
+    public static let h4 = UIFont.systemFont(ofSize: 18, weight: .medium)
+    public static let body = UIFont.systemFont(ofSize: 16, weight: .medium)
+    public static let bodyLight = UIFont.systemFont(ofSize: 16, weight: .regular)
 }

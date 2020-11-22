@@ -34,9 +34,7 @@ class BasicNavigationController: UINavigationController {
         self.navigationBar.backgroundColor = AppTheme.backgroundMain
         self.navigationBar.isUserInteractionEnabled = false
         self.navigationBar.tintColor = AppTheme.textMain
-        self.navigationBar.prefersLargeTitles = true
-        self.navigationItem.largeTitleDisplayMode = .automatic
-        self.navigationBar.largeTitleTextAttributes = [.font: AppTheme.h1, .foregroundColor: AppTheme.textMain]
+        self.navigationBar.prefersLargeTitles = false
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

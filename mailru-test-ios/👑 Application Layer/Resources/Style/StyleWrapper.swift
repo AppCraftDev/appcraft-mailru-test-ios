@@ -80,6 +80,24 @@ extension StyleWrapper where Element: UILabel {
         }
     }
     
+    static var h4: StyleWrapper {
+        return .wrap { label in
+            label.font = AppTheme.h4
+        }
+    }
+    
+    static var body: StyleWrapper {
+        return .wrap { label in
+            label.font = AppTheme.body
+        }
+    }
+    
+    static var bodyLight: StyleWrapper {
+        return .wrap { label in
+            label.font = AppTheme.bodyLight
+        }
+    }
+    
     static var textMain: StyleWrapper {
         return .wrap { label in
             label.textColor = AppTheme.textMain
@@ -89,6 +107,24 @@ extension StyleWrapper where Element: UILabel {
     static var textSub: StyleWrapper {
         return .wrap { label in
             label.textColor = AppTheme.textSub
+        }
+    }
+    
+    static var textAccent: StyleWrapper {
+        return .wrap { label in
+            label.textColor = AppTheme.textAccent
+        }
+    }
+    
+}
+
+extension StyleWrapper where Element: UIImageView {
+    
+    static func avatar(cornerRadius: CGFloat?) -> StyleWrapper {
+        return .wrap { imageView in
+            imageView.layer.cornerRadius = cornerRadius ?? 0
+            imageView.contentMode = .scaleAspectFill
+            imageView.layer.masksToBounds = true
         }
     }
 
