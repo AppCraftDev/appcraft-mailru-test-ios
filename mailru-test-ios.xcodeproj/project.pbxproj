@@ -1,0 +1,925 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7EF3F11DC439F152EAE18B6 /* Pods_mailru_test_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A941A12E3F1A86E6F6421AE /* Pods_mailru_test_ios.framework */; };
+		E20934F6256965AB00C9C0F7 /* ContactListTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20934F3256965AB00C9C0F7 /* ContactListTableCellModel.swift */; };
+		E20934F7256965AB00C9C0F7 /* ContactListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20934F4256965AB00C9C0F7 /* ContactListTableCell.swift */; };
+		E209350C256AB29400C9C0F7 /* PhoneTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2093509256AB29400C9C0F7 /* PhoneTableCellModel.swift */; };
+		E209350D256AB29400C9C0F7 /* PhoneTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209350A256AB29400C9C0F7 /* PhoneTableCell.swift */; };
+		E2093517256AB54A00C9C0F7 /* AvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2093514256AB54A00C9C0F7 /* AvatarViewModel.swift */; };
+		E2093519256AB54A00C9C0F7 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2093516256AB54A00C9C0F7 /* AvatarView.swift */; };
+		E209351D256AC8B300C9C0F7 /* AvatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209351C256AC8B300C9C0F7 /* AvatarModel.swift */; };
+		E2093522256AD5F300C9C0F7 /* String+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2093521256AD5F300C9C0F7 /* String+Replace.swift */; };
+		E2093539256AD8DE00C9C0F7 /* DataSourceEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2093538256AD8DE00C9C0F7 /* DataSourceEmptyView.swift */; };
+		E209353F256ADEF900C9C0F7 /* EmptyTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209353C256ADEF900C9C0F7 /* EmptyTableViewModel.swift */; };
+		E2093541256ADEF900C9C0F7 /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209353E256ADEF900C9C0F7 /* EmptyTableView.swift */; };
+		E2C157312569365E0045669B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E2C157302569365E0045669B /* Podfile */; };
+		E2C157332569365E0045669B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E2C157322569365E0045669B /* .swiftlint.yml */; };
+		E2C157352569365E0045669B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E2C157342569365E0045669B /* .gitignore */; };
+		E2C157382569365E0045669B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157372569365E0045669B /* AppConfiguration.swift */; };
+		E2C1573A2569365E0045669B /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157392569365E0045669B /* AppDefaults.swift */; };
+		E2C1573C2569365E0045669B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1573B2569365E0045669B /* AppDelegate.swift */; };
+		E2C1573F2569365E0045669B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1573D2569365E0045669B /* LaunchScreen.storyboard */; };
+		E2C157452569365E0045669B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2C157432569365E0045669B /* Localizable.strings */; };
+		E2C157482569365E0045669B /* AppLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157472569365E0045669B /* AppLocalization.swift */; };
+		E2C1574A2569365E0045669B /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157492569365E0045669B /* Localizable.swift */; };
+		E2C1574C2569365E0045669B /* AppLocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1574B2569365E0045669B /* AppLocalizationManager.swift */; };
+		E2C157502569365E0045669B /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1574F2569365E0045669B /* AppAssets.swift */; };
+		E2C157522569365E0045669B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C157512569365E0045669B /* Assets.xcassets */; };
+		E2C157562569365E0045669B /* FiraSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C157552569365E0045669B /* FiraSans-ExtraBold.ttf */; };
+		E2C157582569365E0045669B /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C157572569365E0045669B /* FiraSans-Regular.ttf */; };
+		E2C1575A2569365E0045669B /* FiraSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C157592569365E0045669B /* FiraSans-SemiBold.ttf */; };
+		E2C1575C2569365E0045669B /* FiraSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1575B2569365E0045669B /* FiraSans.swift */; };
+		E2C1575F2569365F0045669B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1575E2569365F0045669B /* AppTheme.swift */; };
+		E2C157612569365F0045669B /* AppThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157602569365F0045669B /* AppThemeManager.swift */; };
+		E2C157642569365F0045669B /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157632569365F0045669B /* Stylable.swift */; };
+		E2C157662569365F0045669B /* StyleWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157652569365F0045669B /* StyleWrapper.swift */; };
+		E2C157692569365F0045669B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C157672569365F0045669B /* LaunchScreen.storyboard */; };
+		E2C157732569365F0045669B /* mailru-test-ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2C157712569365F0045669B /* mailru-test-ios.xcdatamodeld */; };
+		E2C157752569365F0045669B /* mailru-test-iosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157742569365F0045669B /* mailru-test-iosRepository.swift */; };
+		E2C157812569365F0045669B /* BasicNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157802569365F0045669B /* BasicNavigationController.swift */; };
+		E2C157852569365F0045669B /* InitialAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157842569365F0045669B /* InitialAssembly.swift */; };
+		E2C157872569365F0045669B /* InitialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157862569365F0045669B /* InitialInteractor.swift */; };
+		E2C157892569365F0045669B /* InitialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157882569365F0045669B /* InitialPresenter.swift */; };
+		E2C1578B2569365F0045669B /* InitialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1578A2569365F0045669B /* InitialRouter.swift */; };
+		E2C1578D2569365F0045669B /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1578C2569365F0045669B /* InitialViewController.swift */; };
+		E2C157912569365F0045669B /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157902569365F0045669B /* InitialViewModel.swift */; };
+		E2C157A1256936910045669B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C157672569365F0045669B /* LaunchScreen.storyboard */; };
+		E2C157B5256940ED0045669B /* ListContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157AF256940ED0045669B /* ListContactViewModel.swift */; };
+		E2C157B6256940ED0045669B /* ListContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157B0256940ED0045669B /* ListContactViewController.swift */; };
+		E2C157B7256940ED0045669B /* ListContactAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157B1256940ED0045669B /* ListContactAssembly.swift */; };
+		E2C157B8256940ED0045669B /* ListContactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157B2256940ED0045669B /* ListContactRouter.swift */; };
+		E2C157BA256940ED0045669B /* ListContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157B4256940ED0045669B /* ListContactPresenter.swift */; };
+		E2C157C3256941110045669B /* DetailContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157BD256941110045669B /* DetailContactViewModel.swift */; };
+		E2C157C4256941110045669B /* DetailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157BE256941110045669B /* DetailContactViewController.swift */; };
+		E2C157C5256941110045669B /* DetailContactAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157BF256941110045669B /* DetailContactAssembly.swift */; };
+		E2C157C6256941110045669B /* DetailContactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157C0256941110045669B /* DetailContactRouter.swift */; };
+		E2C157C8256941110045669B /* DetailContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157C2256941110045669B /* DetailContactPresenter.swift */; };
+		E2C157CB256941650045669B /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157CA256941650045669B /* AppManager.swift */; };
+		E2C157D7256952300045669B /* ListContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157D6256952300045669B /* ListContactUseCase.swift */; };
+		E2F00A4B256958D7005157E1 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F00A4A256958D7005157E1 /* ContactModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		614AA9E05E62B6415CC5EE00 /* Pods-mailru-test-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mailru-test-ios.release.xcconfig"; path = "Target Support Files/Pods-mailru-test-ios/Pods-mailru-test-ios.release.xcconfig"; sourceTree = "<group>"; };
+		8A941A12E3F1A86E6F6421AE /* Pods_mailru_test_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mailru_test_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B736C51A64468710E0B6940 /* Pods-mailru-test-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mailru-test-ios.debug.xcconfig"; path = "Target Support Files/Pods-mailru-test-ios/Pods-mailru-test-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E20934F3256965AB00C9C0F7 /* ContactListTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableCellModel.swift; sourceTree = "<group>"; };
+		E20934F4256965AB00C9C0F7 /* ContactListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableCell.swift; sourceTree = "<group>"; };
+		E2093509256AB29400C9C0F7 /* PhoneTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableCellModel.swift; sourceTree = "<group>"; };
+		E209350A256AB29400C9C0F7 /* PhoneTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableCell.swift; sourceTree = "<group>"; };
+		E2093514256AB54A00C9C0F7 /* AvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewModel.swift; sourceTree = "<group>"; };
+		E2093516256AB54A00C9C0F7 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		E209351C256AC8B300C9C0F7 /* AvatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarModel.swift; sourceTree = "<group>"; };
+		E2093521256AD5F300C9C0F7 /* String+Replace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Replace.swift"; sourceTree = "<group>"; };
+		E2093538256AD8DE00C9C0F7 /* DataSourceEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceEmptyView.swift; sourceTree = "<group>"; };
+		E209353C256ADEF900C9C0F7 /* EmptyTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewModel.swift; sourceTree = "<group>"; };
+		E209353E256ADEF900C9C0F7 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
+		E2C1572D2569365E0045669B /* mailru-test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mailru-test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2C157302569365E0045669B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E2C157322569365E0045669B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
+		E2C157342569365E0045669B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		E2C157372569365E0045669B /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		E2C157392569365E0045669B /* AppDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
+		E2C1573B2569365E0045669B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2C1573E2569365E0045669B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2C157442569365E0045669B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E2C157462569365E0045669B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E2C157472569365E0045669B /* AppLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalization.swift; sourceTree = "<group>"; };
+		E2C157492569365E0045669B /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		E2C1574B2569365E0045669B /* AppLocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizationManager.swift; sourceTree = "<group>"; };
+		E2C1574F2569365E0045669B /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
+		E2C157512569365E0045669B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2C157552569365E0045669B /* FiraSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E2C157572569365E0045669B /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
+		E2C157592569365E0045669B /* FiraSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E2C1575B2569365E0045669B /* FiraSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiraSans.swift; sourceTree = "<group>"; };
+		E2C1575E2569365F0045669B /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		E2C157602569365F0045669B /* AppThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeManager.swift; sourceTree = "<group>"; };
+		E2C157632569365F0045669B /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
+		E2C157652569365F0045669B /* StyleWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleWrapper.swift; sourceTree = "<group>"; };
+		E2C157682569365F0045669B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E2C1576C2569365F0045669B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		E2C1576E2569365F0045669B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		E2C157702569365F0045669B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		E2C157722569365F0045669B /* mailru-test-ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mailru-test-ios.xcdatamodel"; sourceTree = "<group>"; };
+		E2C157742569365F0045669B /* mailru-test-iosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "mailru-test-iosRepository.swift"; sourceTree = "<group>"; };
+		E2C157772569365F0045669B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		E2C157802569365F0045669B /* BasicNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigationController.swift; sourceTree = "<group>"; };
+		E2C157842569365F0045669B /* InitialAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAssembly.swift; sourceTree = "<group>"; };
+		E2C157862569365F0045669B /* InitialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialInteractor.swift; sourceTree = "<group>"; };
+		E2C157882569365F0045669B /* InitialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
+		E2C1578A2569365F0045669B /* InitialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRouter.swift; sourceTree = "<group>"; };
+		E2C1578C2569365F0045669B /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		E2C157902569365F0045669B /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		E2C157992569365F0045669B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2C157AF256940ED0045669B /* ListContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactViewModel.swift; sourceTree = "<group>"; };
+		E2C157B0256940ED0045669B /* ListContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactViewController.swift; sourceTree = "<group>"; };
+		E2C157B1256940ED0045669B /* ListContactAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactAssembly.swift; sourceTree = "<group>"; };
+		E2C157B2256940ED0045669B /* ListContactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactRouter.swift; sourceTree = "<group>"; };
+		E2C157B4256940ED0045669B /* ListContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactPresenter.swift; sourceTree = "<group>"; };
+		E2C157BD256941110045669B /* DetailContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactViewModel.swift; sourceTree = "<group>"; };
+		E2C157BE256941110045669B /* DetailContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactViewController.swift; sourceTree = "<group>"; };
+		E2C157BF256941110045669B /* DetailContactAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactAssembly.swift; sourceTree = "<group>"; };
+		E2C157C0256941110045669B /* DetailContactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactRouter.swift; sourceTree = "<group>"; };
+		E2C157C2256941110045669B /* DetailContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactPresenter.swift; sourceTree = "<group>"; };
+		E2C157CA256941650045669B /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		E2C157D6256952300045669B /* ListContactUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactUseCase.swift; sourceTree = "<group>"; };
+		E2F00A4A256958D7005157E1 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2C157292569365E0045669B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7EF3F11DC439F152EAE18B6 /* Pods_mailru_test_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA7C972BF3A710BD395025F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A941A12E3F1A86E6F6421AE /* Pods_mailru_test_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E20934F22569659400C9C0F7 /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				E20934F3256965AB00C9C0F7 /* ContactListTableCellModel.swift */,
+				E20934F4256965AB00C9C0F7 /* ContactListTableCell.swift */,
+			);
+			path = ContactList;
+			sourceTree = "<group>";
+		};
+		E2093508256AB28400C9C0F7 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				E2093509256AB29400C9C0F7 /* PhoneTableCellModel.swift */,
+				E209350A256AB29400C9C0F7 /* PhoneTableCell.swift */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
+		E2093512256AB51700C9C0F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E209353B256ADEE500C9C0F7 /* EmptyTable */,
+				E2093513256AB53300C9C0F7 /* Avatar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E2093513256AB53300C9C0F7 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				E2093514256AB54A00C9C0F7 /* AvatarViewModel.swift */,
+				E2093516256AB54A00C9C0F7 /* AvatarView.swift */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		E2093520256AD5DF00C9C0F7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E2093521256AD5F300C9C0F7 /* String+Replace.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E2093537256AD8B300C9C0F7 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E2093538256AD8DE00C9C0F7 /* DataSourceEmptyView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		E209353B256ADEE500C9C0F7 /* EmptyTable */ = {
+			isa = PBXGroup;
+			children = (
+				E209353C256ADEF900C9C0F7 /* EmptyTableViewModel.swift */,
+				E209353E256ADEF900C9C0F7 /* EmptyTableView.swift */,
+			);
+			path = EmptyTable;
+			sourceTree = "<group>";
+		};
+		E2C157232569365E0045669B = {
+			isa = PBXGroup;
+			children = (
+				E2C1572F2569365E0045669B /* mailru-test-ios */,
+				E2C1572E2569365E0045669B /* Products */,
+				F911978748DA93021B27DBEA /* Pods */,
+				DA7C972BF3A710BD395025F7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E2C1572E2569365E0045669B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2C1572D2569365E0045669B /* mailru-test-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2C1572F2569365E0045669B /* mailru-test-ios */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157302569365E0045669B /* Podfile */,
+				E2C157322569365E0045669B /* .swiftlint.yml */,
+				E2C157342569365E0045669B /* .gitignore */,
+				E2C157992569365F0045669B /* Info.plist */,
+				E2C157362569365E0045669B /* 👑 Application Layer */,
+				E2C1576A2569365F0045669B /* 🧠 Data Layer */,
+				E2C157762569365F0045669B /* 🧩 Domain Layer */,
+				E2C157782569365F0045669B /* 🌟 Presentation Layer */,
+				E2C157972569365F0045669B /* 🤖 Service Layer */,
+			);
+			path = "mailru-test-ios";
+			sourceTree = "<group>";
+		};
+		E2C157362569365E0045669B /* 👑 Application Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157372569365E0045669B /* AppConfiguration.swift */,
+				E2C157392569365E0045669B /* AppDefaults.swift */,
+				E2C1573B2569365E0045669B /* AppDelegate.swift */,
+				E2C157CA256941650045669B /* AppManager.swift */,
+				E2093520256AD5DF00C9C0F7 /* Extension */,
+				E2C157672569365F0045669B /* LaunchScreen.storyboard */,
+				E2C1573D2569365E0045669B /* LaunchScreen.storyboard */,
+				E2C157422569365E0045669B /* Localization */,
+				E2C1574D2569365E0045669B /* Resources */,
+			);
+			path = "👑 Application Layer";
+			sourceTree = "<group>";
+		};
+		E2C157422569365E0045669B /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157432569365E0045669B /* Localizable.strings */,
+				E2C157472569365E0045669B /* AppLocalization.swift */,
+				E2C157492569365E0045669B /* Localizable.swift */,
+				E2C1574B2569365E0045669B /* AppLocalizationManager.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		E2C1574D2569365E0045669B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2C1574E2569365E0045669B /* Assets */,
+				E2C157532569365E0045669B /* Fonts */,
+				E2C1575D2569365F0045669B /* Theme */,
+				E2C157622569365F0045669B /* Style */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E2C1574E2569365E0045669B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E2C1574F2569365E0045669B /* AppAssets.swift */,
+				E2C157512569365E0045669B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E2C157532569365E0045669B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157542569365E0045669B /* Fira Sans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E2C157542569365E0045669B /* Fira Sans */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157552569365E0045669B /* FiraSans-ExtraBold.ttf */,
+				E2C157572569365E0045669B /* FiraSans-Regular.ttf */,
+				E2C157592569365E0045669B /* FiraSans-SemiBold.ttf */,
+				E2C1575B2569365E0045669B /* FiraSans.swift */,
+			);
+			path = "Fira Sans";
+			sourceTree = "<group>";
+		};
+		E2C1575D2569365F0045669B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				E2C1575E2569365F0045669B /* AppTheme.swift */,
+				E2C157602569365F0045669B /* AppThemeManager.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		E2C157622569365F0045669B /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157632569365F0045669B /* Stylable.swift */,
+				E2C157652569365F0045669B /* StyleWrapper.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		E2C1576A2569365F0045669B /* 🧠 Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157742569365F0045669B /* mailru-test-iosRepository.swift */,
+				E2C157712569365F0045669B /* mailru-test-ios.xcdatamodeld */,
+				E2C1576B2569365F0045669B /* Requests */,
+				E2C1576D2569365F0045669B /* Responses */,
+				E2C1576F2569365F0045669B /* Models */,
+			);
+			path = "🧠 Data Layer";
+			sourceTree = "<group>";
+		};
+		E2C1576B2569365F0045669B /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				E2C1576C2569365F0045669B /* .gitkeep */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		E2C1576D2569365F0045669B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				E2C1576E2569365F0045669B /* .gitkeep */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		E2C1576F2569365F0045669B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157702569365F0045669B /* .gitkeep */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E2C157762569365F0045669B /* 🧩 Domain Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E2F00A49256958C3005157E1 /* Models */,
+				E2F00A48256958BA005157E1 /* UseCases */,
+			);
+			path = "🧩 Domain Layer";
+			sourceTree = "<group>";
+		};
+		E2C157782569365F0045669B /* 🌟 Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157792569365F0045669B /* Components */,
+				E2C1577E2569365F0045669B /* Navigation */,
+				E2C157822569365F0045669B /* User Stories */,
+			);
+			path = "🌟 Presentation Layer";
+			sourceTree = "<group>";
+		};
+		E2C157792569365F0045669B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E2093537256AD8B300C9C0F7 /* Custom */,
+				E2093512256AB51700C9C0F7 /* Views */,
+				E2C1577A2569365F0045669B /* TableCells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E2C1577A2569365F0045669B /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				E20934F22569659400C9C0F7 /* ContactList */,
+				E2093508256AB28400C9C0F7 /* Phone */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		E2C1577E2569365F0045669B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E2C1577F2569365F0045669B /* Navigation Controller */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		E2C1577F2569365F0045669B /* Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157802569365F0045669B /* BasicNavigationController.swift */,
+			);
+			path = "Navigation Controller";
+			sourceTree = "<group>";
+		};
+		E2C157822569365F0045669B /* User Stories */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157AC256940CE0045669B /* Contact */,
+				E2C157832569365F0045669B /* Initial */,
+			);
+			path = "User Stories";
+			sourceTree = "<group>";
+		};
+		E2C157832569365F0045669B /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157842569365F0045669B /* InitialAssembly.swift */,
+				E2C157862569365F0045669B /* InitialInteractor.swift */,
+				E2C157882569365F0045669B /* InitialPresenter.swift */,
+				E2C1578A2569365F0045669B /* InitialRouter.swift */,
+				E2C1578C2569365F0045669B /* InitialViewController.swift */,
+				E2C157902569365F0045669B /* InitialViewModel.swift */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		E2C157972569365F0045669B /* 🤖 Service Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157772569365F0045669B /* .gitkeep */,
+			);
+			path = "🤖 Service Layer";
+			sourceTree = "<group>";
+		};
+		E2C157AC256940CE0045669B /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157AE256940D90045669B /* Detail */,
+				E2C157AD256940D40045669B /* List */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		E2C157AD256940D40045669B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157B1256940ED0045669B /* ListContactAssembly.swift */,
+				E2C157B4256940ED0045669B /* ListContactPresenter.swift */,
+				E2C157B2256940ED0045669B /* ListContactRouter.swift */,
+				E2C157B0256940ED0045669B /* ListContactViewController.swift */,
+				E2C157AF256940ED0045669B /* ListContactViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		E2C157AE256940D90045669B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157BF256941110045669B /* DetailContactAssembly.swift */,
+				E2C157C2256941110045669B /* DetailContactPresenter.swift */,
+				E2C157C0256941110045669B /* DetailContactRouter.swift */,
+				E2C157BE256941110045669B /* DetailContactViewController.swift */,
+				E2C157BD256941110045669B /* DetailContactViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E2F00A48256958BA005157E1 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E2C157D6256952300045669B /* ListContactUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		E2F00A49256958C3005157E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E209351C256AC8B300C9C0F7 /* AvatarModel.swift */,
+				E2F00A4A256958D7005157E1 /* ContactModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F911978748DA93021B27DBEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B736C51A64468710E0B6940 /* Pods-mailru-test-ios.debug.xcconfig */,
+				614AA9E05E62B6415CC5EE00 /* Pods-mailru-test-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2C1572C2569365E0045669B /* mailru-test-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2C1579C2569365F0045669B /* Build configuration list for PBXNativeTarget "mailru-test-ios" */;
+			buildPhases = (
+				165619096CE0B41B9B6DD3B5 /* [CP] Check Pods Manifest.lock */,
+				E2C157282569365E0045669B /* Sources */,
+				E2C157292569365E0045669B /* Frameworks */,
+				E2C1572A2569365E0045669B /* Resources */,
+				E2C1572B2569365E0045669B /* Swift Lint */,
+				DA00D1C223EAF8E634F8C324 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mailru-test-ios";
+			productName = "mailru-test-ios";
+			productReference = E2C1572D2569365E0045669B /* mailru-test-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2C157242569365E0045669B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					E2C1572C2569365E0045669B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = E2C157272569365E0045669B /* Build configuration list for PBXProject "mailru-test-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = E2C157232569365E0045669B;
+			productRefGroup = E2C1572E2569365E0045669B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2C1572C2569365E0045669B /* mailru-test-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2C1572A2569365E0045669B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2C157452569365E0045669B /* Localizable.strings in Resources */,
+				E2C157332569365E0045669B /* .swiftlint.yml in Resources */,
+				E2C1575A2569365E0045669B /* FiraSans-SemiBold.ttf in Resources */,
+				E2C157692569365F0045669B /* LaunchScreen.storyboard in Resources */,
+				E2C157A1256936910045669B /* LaunchScreen.storyboard in Resources */,
+				E2C1573F2569365E0045669B /* LaunchScreen.storyboard in Resources */,
+				E2C157562569365E0045669B /* FiraSans-ExtraBold.ttf in Resources */,
+				E2C157352569365E0045669B /* .gitignore in Resources */,
+				E2C157522569365E0045669B /* Assets.xcassets in Resources */,
+				E2C157582569365E0045669B /* FiraSans-Regular.ttf in Resources */,
+				E2C157312569365E0045669B /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		165619096CE0B41B9B6DD3B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mailru-test-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA00D1C223EAF8E634F8C324 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mailru-test-ios/Pods-mailru-test-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mailru-test-ios/Pods-mailru-test-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mailru-test-ios/Pods-mailru-test-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2C1572B2569365E0045669B /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2C157282569365E0045669B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2C157D7256952300045669B /* ListContactUseCase.swift in Sources */,
+				E2C1575C2569365E0045669B /* FiraSans.swift in Sources */,
+				E2C1574C2569365E0045669B /* AppLocalizationManager.swift in Sources */,
+				E2C157C4256941110045669B /* DetailContactViewController.swift in Sources */,
+				E2C1573C2569365E0045669B /* AppDelegate.swift in Sources */,
+				E209351D256AC8B300C9C0F7 /* AvatarModel.swift in Sources */,
+				E2C157642569365F0045669B /* Stylable.swift in Sources */,
+				E2093522256AD5F300C9C0F7 /* String+Replace.swift in Sources */,
+				E2C157B7256940ED0045669B /* ListContactAssembly.swift in Sources */,
+				E2C157C8256941110045669B /* DetailContactPresenter.swift in Sources */,
+				E2C157CB256941650045669B /* AppManager.swift in Sources */,
+				E209353F256ADEF900C9C0F7 /* EmptyTableViewModel.swift in Sources */,
+				E2C1578B2569365F0045669B /* InitialRouter.swift in Sources */,
+				E2C157612569365F0045669B /* AppThemeManager.swift in Sources */,
+				E2C157892569365F0045669B /* InitialPresenter.swift in Sources */,
+				E2C157812569365F0045669B /* BasicNavigationController.swift in Sources */,
+				E2093519256AB54A00C9C0F7 /* AvatarView.swift in Sources */,
+				E20934F7256965AB00C9C0F7 /* ContactListTableCell.swift in Sources */,
+				E2C157912569365F0045669B /* InitialViewModel.swift in Sources */,
+				E2C157872569365F0045669B /* InitialInteractor.swift in Sources */,
+				E2C1575F2569365F0045669B /* AppTheme.swift in Sources */,
+				E2093539256AD8DE00C9C0F7 /* DataSourceEmptyView.swift in Sources */,
+				E2C157382569365E0045669B /* AppConfiguration.swift in Sources */,
+				E2C157C6256941110045669B /* DetailContactRouter.swift in Sources */,
+				E2C157C3256941110045669B /* DetailContactViewModel.swift in Sources */,
+				E20934F6256965AB00C9C0F7 /* ContactListTableCellModel.swift in Sources */,
+				E209350D256AB29400C9C0F7 /* PhoneTableCell.swift in Sources */,
+				E2C157B8256940ED0045669B /* ListContactRouter.swift in Sources */,
+				E2093541256ADEF900C9C0F7 /* EmptyTableView.swift in Sources */,
+				E2C1574A2569365E0045669B /* Localizable.swift in Sources */,
+				E2C157482569365E0045669B /* AppLocalization.swift in Sources */,
+				E2F00A4B256958D7005157E1 /* ContactModel.swift in Sources */,
+				E2C157852569365F0045669B /* InitialAssembly.swift in Sources */,
+				E2C157B5256940ED0045669B /* ListContactViewModel.swift in Sources */,
+				E2C157752569365F0045669B /* mailru-test-iosRepository.swift in Sources */,
+				E2C1578D2569365F0045669B /* InitialViewController.swift in Sources */,
+				E2C1573A2569365E0045669B /* AppDefaults.swift in Sources */,
+				E209350C256AB29400C9C0F7 /* PhoneTableCellModel.swift in Sources */,
+				E2093517256AB54A00C9C0F7 /* AvatarViewModel.swift in Sources */,
+				E2C157C5256941110045669B /* DetailContactAssembly.swift in Sources */,
+				E2C157BA256940ED0045669B /* ListContactPresenter.swift in Sources */,
+				E2C157502569365E0045669B /* AppAssets.swift in Sources */,
+				E2C157B6256940ED0045669B /* ListContactViewController.swift in Sources */,
+				E2C157662569365F0045669B /* StyleWrapper.swift in Sources */,
+				E2C157732569365F0045669B /* mailru-test-ios.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E2C1573D2569365E0045669B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2C1573E2569365E0045669B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E2C157432569365E0045669B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2C157442569365E0045669B /* en */,
+				E2C157462569365E0045669B /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E2C157672569365F0045669B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2C157682569365F0045669B /* ru */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2C1579A2569365F0045669B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E2C1579B2569365F0045669B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2C1579D2569365F0045669B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B736C51A64468710E0B6940 /* Pods-mailru-test-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7PN6PXP9S4;
+				INFOPLIST_FILE = "mailru-test-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcraft.dev.mailru-test-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2C1579E2569365F0045669B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 614AA9E05E62B6415CC5EE00 /* Pods-mailru-test-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7PN6PXP9S4;
+				INFOPLIST_FILE = "mailru-test-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcraft.dev.mailru-test-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2C157272569365E0045669B /* Build configuration list for PBXProject "mailru-test-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2C1579A2569365F0045669B /* Debug */,
+				E2C1579B2569365F0045669B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2C1579C2569365F0045669B /* Build configuration list for PBXNativeTarget "mailru-test-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2C1579D2569365F0045669B /* Debug */,
+				E2C1579E2569365F0045669B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E2C157712569365F0045669B /* mailru-test-ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E2C157722569365F0045669B /* mailru-test-ios.xcdatamodel */,
+			);
+			currentVersion = E2C157722569365F0045669B /* mailru-test-ios.xcdatamodel */;
+			path = "mailru-test-ios.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E2C157242569365E0045669B /* Project object */;
+}

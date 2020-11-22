@@ -1,0 +1,54 @@
+PODS:
+  - DPLibrary (1.4.4):
+    - KeychainSwift (~> 19.0)
+    - Kingfisher (~> 5.15.6)
+  - GKCoreData (1.0.5):
+    - GKExtensions (~> 1.1.0)
+  - GKExtensions (1.1.0)
+  - GKNetwork (1.1.2):
+    - GKExtensions (~> 1.1.0)
+  - GKRepresentable (1.0.1):
+    - GKExtensions (~> 1.1.0)
+  - GKUseCase (1.0.2):
+    - GKCoreData (~> 1.0.5)
+    - GKExtensions (~> 1.1.0)
+    - GKNetwork (~> 1.1.0)
+  - GKViper (1.0.0):
+    - GKExtensions (~> 1.1.0)
+  - KeychainSwift (19.0.0)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
+
+DEPENDENCIES:
+  - DPLibrary
+  - GKRepresentable (~> 1.0.1)
+  - GKUseCase (~> 1.0.1)
+  - GKViper (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - DPLibrary
+    - GKCoreData
+    - GKExtensions
+    - GKNetwork
+    - GKRepresentable
+    - GKUseCase
+    - GKViper
+    - KeychainSwift
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  DPLibrary: 1a7dd9192de40f953e5ae453502bf5ec782bbe31
+  GKCoreData: c9d4315c9d425bac1dca8448f3ffac0d13c3644b
+  GKExtensions: e2336b4ae2a62bfc968fd1a4ced30365ffb3f73b
+  GKNetwork: b2e0500499c6a82a32fa7fa07b4c8083d15d4395
+  GKRepresentable: 6dcaa093a142604c5f2caa24a3839512331aa2eb
+  GKUseCase: bd50df4ff25a454fdbefff54a7367b799d699c4c
+  GKViper: 1ffe86f32753c4fc834c1325ee1892806c9ff1aa
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+
+PODFILE CHECKSUM: 1410589b96ebf4ea9b6f2b056bebb90b8c48ad28
+
+COCOAPODS: 1.10.0
