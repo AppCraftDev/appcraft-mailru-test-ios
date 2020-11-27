@@ -34,7 +34,7 @@ class AvatarView: UIView {
     
     public func setup(model: AvatarViewModel) {
         self.model = model
-        self.setupView()
+        self.avatar.image = model.avatar?.image
     }
     
     private func setAvatar() {
@@ -49,10 +49,7 @@ class AvatarView: UIView {
             self.avatar.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16)
         ])
         
-        guard let avatar = self.model?.avatar else { return }
-        self.avatar.image = avatar.image
-        self.backgroundColor = avatar.backgroundColor
-        self.avatar.apply([.avatar(cornerRadius: avatar.needRadius ? 40 : 0)])
+        self.avatar.apply([.avatar(cornerRadius: 40)])
     }
     
 }

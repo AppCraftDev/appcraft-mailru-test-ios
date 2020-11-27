@@ -84,7 +84,7 @@ extension ListContactPresenter: ListContactUseCaseOutput {
     
     func provideFetch(useCase: ListContactUseCase, contacts: [ContactModel]) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
-            let rows = contacts.map({ ContactListTableCellModel(contact: $0) })
+            let rows: [ContactListTableCellModel] = contacts.map({ ContactListTableCellModel(contact: $0) })
             self?.view?.reloadData(with: rows)
             self?.view?.setEmptyView(with: nil)
             

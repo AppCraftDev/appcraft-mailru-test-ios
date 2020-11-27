@@ -47,7 +47,7 @@ enum AppTheme {
     public static var accentMain: UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "04E785", alpha: 1.0)
+            return .systemBlue
         }
     }
 
@@ -92,6 +92,7 @@ enum AppTheme {
     
     // MARK: - Typography
     public static let h1 = UIFont.systemFont(ofSize: 30, weight: .bold)
+    public static let h3 = UIFont.systemFont(ofSize: 24, weight: .medium)
     public static let h4 = UIFont.systemFont(ofSize: 18, weight: .medium)
     public static let body = UIFont.systemFont(ofSize: 16, weight: .medium)
     public static let bodyLight = UIFont.systemFont(ofSize: 16, weight: .regular)

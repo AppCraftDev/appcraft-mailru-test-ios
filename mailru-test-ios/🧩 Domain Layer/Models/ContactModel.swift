@@ -19,12 +19,12 @@ struct ContactModel {
     init(contact: CNContact) {
         self.id = contact.identifier
         
-        self.image = AvatarModel(imageData: contact.imageData)
-        self.thumbnail = AvatarModel(imageData: contact.thumbnailImageData)
-        
         let givenName = contact.givenName
         let familyName = contact.familyName
         self.name = "\(givenName)\(givenName.isEmpty ? "" : " ")\(familyName)"
+        
+        self.image = AvatarModel(imageData: contact.imageData, username: self.name)
+        self.thumbnail = AvatarModel(imageData: contact.thumbnailImageData, username: self.name)
         
         let phoneNumbers = contact.phoneNumbers
         let phones = phoneNumbers.map({ $0.value.stringValue })

@@ -14,7 +14,7 @@ target 'mailru-test-ios' do
   pod 'GKUseCase', '~> 1.0.1'
   pod 'GKRepresentable', '~> 1.0.1'
   
-  pod 'DPLibrary'
+  pod 'LetterAvatarKit'
 
 end
 

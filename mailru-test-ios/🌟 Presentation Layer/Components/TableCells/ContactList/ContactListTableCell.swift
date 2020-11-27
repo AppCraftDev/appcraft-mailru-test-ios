@@ -8,7 +8,7 @@
 
 import UIKit
 import GKRepresentable
-import DPLibrary
+import LetterAvatarKit
 
 class ContactListTableCell: TableCell {
     
@@ -34,8 +34,7 @@ class ContactListTableCell: TableCell {
         
         self.nameLb.text = contact.name
         self.phoneMainLb.text = contact.phoneMain
-        
-        self.setupView()
+        self.avatar.image = contact.thumbnail?.image
     }
     
     private func setAvatar() {
@@ -43,17 +42,14 @@ class ContactListTableCell: TableCell {
         self.contentView.addSubview(self.avatar)
         self.avatar.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.avatar.widthAnchor.constraint(equalToConstant: 40),
-            self.avatar.heightAnchor.constraint(equalToConstant: 40),
             self.avatar.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16),
             self.avatar.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 16),
-            self.avatar.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -16)
+//            self.avatar.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -16),
+            self.avatar.widthAnchor.constraint(equalToConstant: 40),
+            self.avatar.heightAnchor.constraint(equalToConstant: 40)
         ])
         
-        guard let avatar = (self.model as? ContactListTableCellModel)?.contact.thumbnail else { return }
-        self.avatar.image = avatar.image
-        self.backgroundColor = avatar.backgroundColor
-        self.avatar.apply([.avatar(cornerRadius: avatar.needRadius ? 20 : 0)])
+        self.avatar.apply([.avatar(cornerRadius: 20)])
     }
     
     private func setNameLb() {
