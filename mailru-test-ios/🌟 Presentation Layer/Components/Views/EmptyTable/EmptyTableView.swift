@@ -30,6 +30,7 @@ class EmptyTableView: UIView, DataSourceEmptyView {
     
     // MARK: - Setup functions
     func setupView() {
+        self.apply(.backgroundMain)
         self.setMessageLb()
         self.setBtn()
     }

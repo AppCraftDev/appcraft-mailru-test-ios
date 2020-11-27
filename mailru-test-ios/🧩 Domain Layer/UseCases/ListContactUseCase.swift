@@ -53,7 +53,12 @@ class ListContactUseCase: UseCase, ListContactUseCaseInput {
                     return
                 }
                 let contactModels = result.map({ ContactModel(contact: $0) })
-                self.output?.provideFetch(useCase: self, contacts: contactModels)
+                
+                var result: [ContactModel] = []
+                result.append(contentsOf: contactModels.filter({ !$0.name.isEmpty }).sorted(by: { $0.name < $1.name }))
+                result.append(contentsOf: contactModels.filter({ $0.name.isEmpty }).sorted(by: { $0.name < $1.name }))
+                
+                self.output?.provideFetch(useCase: self, contacts: result)
             }
         }
     }

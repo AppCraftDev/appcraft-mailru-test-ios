@@ -7,27 +7,21 @@
 
 import Foundation
 import UIKit
+import LetterAvatarKit
 
 struct AvatarModel {
     let image: UIImage?
-    let backgroundColor: UIColor?
-    let needRadius: Bool
     
-    init?(imageData: Data?) {
+    init?(imageData: Data?, username: String) {
         if let avatar = imageData {
             self.image = UIImage(data: avatar)
-            self.backgroundColor = nil
-            self.needRadius = true
         } else {
-            if #available(iOS 13.0, *) {
-                self.image = UIImage(systemName: "person")
-                self.backgroundColor = nil
-                self.needRadius = false
-            } else {
-                self.image = nil
-                self.backgroundColor = AppTheme.backgroundContent()
-                self.needRadius = true
-            }
+            self.image = LetterAvatarMaker()
+                .setCircle(true)
+                .setLettersFont(AppTheme.h3)
+                .setUsername(username)
+                .setBackgroundColors([ AppTheme.accentMain ])
+                .build()
         }
     }
 }

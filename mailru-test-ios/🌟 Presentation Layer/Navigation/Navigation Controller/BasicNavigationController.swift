@@ -31,7 +31,6 @@ class BasicNavigationController: UINavigationController {
         self.navigationBar.isTranslucent = true
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationBar.shadowImage = UIImage()
-        self.navigationBar.backgroundColor = AppTheme.backgroundMain
         self.navigationBar.isUserInteractionEnabled = false
         self.navigationBar.tintColor = AppTheme.textMain
         self.navigationBar.prefersLargeTitles = false

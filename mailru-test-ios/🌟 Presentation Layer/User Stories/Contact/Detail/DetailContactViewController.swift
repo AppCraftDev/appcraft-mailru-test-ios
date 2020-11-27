@@ -8,7 +8,6 @@
 
 import GKViper
 import GKRepresentable
-import DPLibrary
 
 protocol DetailContactViewInput: ViperViewInput {
     func reloadData(with rows: [TableCellModel])
@@ -37,8 +36,6 @@ class DetailContactViewController: ViperViewController, DetailContactViewInput {
     // MARK: - Setup functions
     func setupComponents() {
         self.navigationItem.title = ""
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
         self.setTable()
     }
     
@@ -93,6 +90,7 @@ extension DetailContactViewController {
         self.table.delegate = self
         self.table.dataSource = self
         self.table.registerCellClass(PhoneTableCell.self)
+        self.table.tableFooterView = UIView()
     }
     
 }
@@ -101,7 +99,8 @@ extension DetailContactViewController {
 extension DetailContactViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let model = self.rows.element(at: indexPath.row) else { return }
+        guard self.rows.indices.contains(indexPath.row) else { return }
+        let model = self.rows[indexPath.row]
         self.output?.didSelectRow(model)
     }
     
@@ -115,10 +114,9 @@ extension DetailContactViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard
-            let model = self.rows.element(at: indexPath.row),
-            let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier, for: indexPath) as? TableCell
-        else { return UITableViewCell() }
+        guard self.rows.indices.contains(indexPath.row) else { return UITableViewCell() }
+        let model = self.rows[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier, for: indexPath) as? TableCell else { return UITableViewCell() }
         cell.setupView()
         cell.model = model
         return cell

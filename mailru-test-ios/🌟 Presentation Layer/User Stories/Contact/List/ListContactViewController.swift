@@ -8,7 +8,6 @@
 
 import GKViper
 import GKRepresentable
-import DPLibrary
 
 protocol ListContactViewInput: ViperViewInput {
     func reloadData(with rows: [TableCellModel])
@@ -50,8 +49,6 @@ class ListContactViewController: ViperViewController, ListContactViewInput {
     // MARK: - Setup functions
     func setupComponents() {
         self.navigationItem.title = AppLocalization.ContactList.navTitle.localized
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
         self.setTable()
     }
     
@@ -113,9 +110,11 @@ extension ListContactViewController {
         self.table.delegate = self
         self.table.dataSource = self
         self.table.registerCellClass(ContactListTableCell.self)
+        self.table.rowHeight = 72
         
         self.table.refreshControl = UIRefreshControl()
         self.table.refreshControl?.addTarget(self, action: #selector(self.beginRefresh), for: .valueChanged)
+        self.table.tableFooterView = UIView()
     }
     
 }
@@ -124,7 +123,8 @@ extension ListContactViewController {
 extension ListContactViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let model = self.rows.element(at: indexPath.row) else { return }
+        guard self.rows.indices.contains(indexPath.row) else { return }
+        let model = self.rows[indexPath.row]
         self.output?.didSelectRow(model)
     }
     
@@ -138,10 +138,9 @@ extension ListContactViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard
-            let model = self.rows.element(at: indexPath.row),
-            let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier, for: indexPath) as? TableCell
-        else { return UITableViewCell() }
+        guard self.rows.indices.contains(indexPath.row) else { return UITableViewCell() }
+        let model = self.rows[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier, for: indexPath) as? TableCell else { return UITableViewCell() }
         cell.setupView()
         cell.model = model
         return cell
