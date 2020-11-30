@@ -1,6 +1,6 @@
 # appcraft-mailru-test-ios
 
-![screencast.gif](скринкаст.gif)
+![https://github.com/AppCraftDev/appcraft-mailru-test-ios/blob/features/bugfix-3/screencast.gif](скринкаст.gif)
 
 ​
 Приложение для ...
