@@ -1,6 +1,6 @@
 # appcraft-mailru-test-ios
 
-![/screencast.gif](скринкаст.gif)
+![screencast.gif](скринкаст.gif)
 
 ​
 Приложение для ...
