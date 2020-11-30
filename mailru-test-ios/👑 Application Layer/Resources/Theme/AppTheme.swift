@@ -19,27 +19,11 @@ enum AppTheme {
     }
     
     // MARK: - Window background color
-    /// hex F0F0F0
     public static var backgroundMain: UIColor {
         if #available(iOS 13.0, *) {
             return .systemBackground
         } else {
             return .white
-        }
-    }
-    
-    /// hex FFFFFF
-    public static func backgroundContent(alpha: CGFloat = 1.0) -> UIColor {
-        switch AppThemeManager.current.type {
-        case .dark:
-            return .lightGray
-        }
-    }
-    
-    public static func backgroundControl(alpha: CGFloat = 1.0) -> UIColor {
-        switch AppThemeManager.current.type {
-        case .dark:
-            return UIColor(hex: "1A2F51", alpha: alpha)
         }
     }
 
@@ -48,21 +32,6 @@ enum AppTheme {
         switch AppThemeManager.current.type {
         case .dark:
             return .systemBlue
-        }
-    }
-
-    // MARK: - Text color on accent background
-    public static var accentTextMain: UIColor {
-        switch AppThemeManager.current.type {
-        case .dark:
-            return UIColor(hex: "101E34", alpha: 1.0)
-        }
-    }
-    
-    public static var accentTextSub: UIColor {
-        switch AppThemeManager.current.type {
-        case .dark:
-            return UIColor(hex: "B0B0B4", alpha: 1.0)
         }
     }
 

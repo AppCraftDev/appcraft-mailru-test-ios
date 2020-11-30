@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A6DD9AF25750D3000890310 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9A6DD9AE25750D3000890310 /* README.md */; };
 		D7EF3F11DC439F152EAE18B6 /* Pods_mailru_test_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A941A12E3F1A86E6F6421AE /* Pods_mailru_test_ios.framework */; };
 		E20934F6256965AB00C9C0F7 /* ContactListTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20934F3256965AB00C9C0F7 /* ContactListTableCellModel.swift */; };
 		E20934F7256965AB00C9C0F7 /* ContactListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20934F4256965AB00C9C0F7 /* ContactListTableCell.swift */; };
@@ -32,20 +33,14 @@
 		E2C1574C2569365E0045669B /* AppLocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1574B2569365E0045669B /* AppLocalizationManager.swift */; };
 		E2C157502569365E0045669B /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1574F2569365E0045669B /* AppAssets.swift */; };
 		E2C157522569365E0045669B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C157512569365E0045669B /* Assets.xcassets */; };
-		E2C157562569365E0045669B /* FiraSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C157552569365E0045669B /* FiraSans-ExtraBold.ttf */; };
-		E2C157582569365E0045669B /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C157572569365E0045669B /* FiraSans-Regular.ttf */; };
-		E2C1575A2569365E0045669B /* FiraSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C157592569365E0045669B /* FiraSans-SemiBold.ttf */; };
-		E2C1575C2569365E0045669B /* FiraSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1575B2569365E0045669B /* FiraSans.swift */; };
 		E2C1575F2569365F0045669B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1575E2569365F0045669B /* AppTheme.swift */; };
 		E2C157612569365F0045669B /* AppThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157602569365F0045669B /* AppThemeManager.swift */; };
 		E2C157642569365F0045669B /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157632569365F0045669B /* Stylable.swift */; };
 		E2C157662569365F0045669B /* StyleWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157652569365F0045669B /* StyleWrapper.swift */; };
 		E2C157692569365F0045669B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C157672569365F0045669B /* LaunchScreen.storyboard */; };
-		E2C157732569365F0045669B /* mailru-test-ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2C157712569365F0045669B /* mailru-test-ios.xcdatamodeld */; };
-		E2C157752569365F0045669B /* mailru-test-iosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157742569365F0045669B /* mailru-test-iosRepository.swift */; };
+		E2C157752569365F0045669B /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157742569365F0045669B /* AppRepository.swift */; };
 		E2C157812569365F0045669B /* BasicNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157802569365F0045669B /* BasicNavigationController.swift */; };
 		E2C157852569365F0045669B /* InitialAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157842569365F0045669B /* InitialAssembly.swift */; };
-		E2C157872569365F0045669B /* InitialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157862569365F0045669B /* InitialInteractor.swift */; };
 		E2C157892569365F0045669B /* InitialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C157882569365F0045669B /* InitialPresenter.swift */; };
 		E2C1578B2569365F0045669B /* InitialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1578A2569365F0045669B /* InitialRouter.swift */; };
 		E2C1578D2569365F0045669B /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1578C2569365F0045669B /* InitialViewController.swift */; };
@@ -70,6 +65,7 @@
 		614AA9E05E62B6415CC5EE00 /* Pods-mailru-test-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mailru-test-ios.release.xcconfig"; path = "Target Support Files/Pods-mailru-test-ios/Pods-mailru-test-ios.release.xcconfig"; sourceTree = "<group>"; };
 		8A941A12E3F1A86E6F6421AE /* Pods_mailru_test_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mailru_test_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B736C51A64468710E0B6940 /* Pods-mailru-test-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mailru-test-ios.debug.xcconfig"; path = "Target Support Files/Pods-mailru-test-ios/Pods-mailru-test-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		9A6DD9AE25750D3000890310 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E20934F3256965AB00C9C0F7 /* ContactListTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableCellModel.swift; sourceTree = "<group>"; };
 		E20934F4256965AB00C9C0F7 /* ContactListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableCell.swift; sourceTree = "<group>"; };
 		E2093509256AB29400C9C0F7 /* PhoneTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableCellModel.swift; sourceTree = "<group>"; };
@@ -96,10 +92,6 @@
 		E2C1574B2569365E0045669B /* AppLocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizationManager.swift; sourceTree = "<group>"; };
 		E2C1574F2569365E0045669B /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
 		E2C157512569365E0045669B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E2C157552569365E0045669B /* FiraSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		E2C157572569365E0045669B /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
-		E2C157592569365E0045669B /* FiraSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		E2C1575B2569365E0045669B /* FiraSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiraSans.swift; sourceTree = "<group>"; };
 		E2C1575E2569365F0045669B /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		E2C157602569365F0045669B /* AppThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeManager.swift; sourceTree = "<group>"; };
 		E2C157632569365F0045669B /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
@@ -108,12 +100,10 @@
 		E2C1576C2569365F0045669B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E2C1576E2569365F0045669B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E2C157702569365F0045669B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		E2C157722569365F0045669B /* mailru-test-ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mailru-test-ios.xcdatamodel"; sourceTree = "<group>"; };
-		E2C157742569365F0045669B /* mailru-test-iosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "mailru-test-iosRepository.swift"; sourceTree = "<group>"; };
+		E2C157742569365F0045669B /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
 		E2C157772569365F0045669B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E2C157802569365F0045669B /* BasicNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigationController.swift; sourceTree = "<group>"; };
 		E2C157842569365F0045669B /* InitialAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAssembly.swift; sourceTree = "<group>"; };
-		E2C157862569365F0045669B /* InitialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialInteractor.swift; sourceTree = "<group>"; };
 		E2C157882569365F0045669B /* InitialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
 		E2C1578A2569365F0045669B /* InitialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRouter.swift; sourceTree = "<group>"; };
 		E2C1578C2569365F0045669B /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +226,7 @@
 		E2C1572F2569365E0045669B /* mailru-test-ios */ = {
 			isa = PBXGroup;
 			children = (
+				9A6DD9AE25750D3000890310 /* README.md */,
 				E2C157302569365E0045669B /* Podfile */,
 				E2C157322569365E0045669B /* .swiftlint.yml */,
 				E2C157342569365E0045669B /* .gitignore */,
@@ -280,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				E2C1574E2569365E0045669B /* Assets */,
-				E2C157532569365E0045669B /* Fonts */,
 				E2C1575D2569365F0045669B /* Theme */,
 				E2C157622569365F0045669B /* Style */,
 			);
@@ -294,25 +284,6 @@
 				E2C157512569365E0045669B /* Assets.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		E2C157532569365E0045669B /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				E2C157542569365E0045669B /* Fira Sans */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		E2C157542569365E0045669B /* Fira Sans */ = {
-			isa = PBXGroup;
-			children = (
-				E2C157552569365E0045669B /* FiraSans-ExtraBold.ttf */,
-				E2C157572569365E0045669B /* FiraSans-Regular.ttf */,
-				E2C157592569365E0045669B /* FiraSans-SemiBold.ttf */,
-				E2C1575B2569365E0045669B /* FiraSans.swift */,
-			);
-			path = "Fira Sans";
 			sourceTree = "<group>";
 		};
 		E2C1575D2569365F0045669B /* Theme */ = {
@@ -336,8 +307,7 @@
 		E2C1576A2569365F0045669B /* 🧠 Data Layer */ = {
 			isa = PBXGroup;
 			children = (
-				E2C157742569365F0045669B /* mailru-test-iosRepository.swift */,
-				E2C157712569365F0045669B /* mailru-test-ios.xcdatamodeld */,
+				E2C157742569365F0045669B /* AppRepository.swift */,
 				E2C1576B2569365F0045669B /* Requests */,
 				E2C1576D2569365F0045669B /* Responses */,
 				E2C1576F2569365F0045669B /* Models */,
@@ -436,7 +406,6 @@
 			isa = PBXGroup;
 			children = (
 				E2C157842569365F0045669B /* InitialAssembly.swift */,
-				E2C157862569365F0045669B /* InitialInteractor.swift */,
 				E2C157882569365F0045669B /* InitialPresenter.swift */,
 				E2C1578A2569365F0045669B /* InitialRouter.swift */,
 				E2C1578C2569365F0045669B /* InitialViewController.swift */,
@@ -575,14 +544,12 @@
 			files = (
 				E2C157452569365E0045669B /* Localizable.strings in Resources */,
 				E2C157332569365E0045669B /* .swiftlint.yml in Resources */,
-				E2C1575A2569365E0045669B /* FiraSans-SemiBold.ttf in Resources */,
 				E2C157692569365F0045669B /* LaunchScreen.storyboard in Resources */,
 				E2C157A1256936910045669B /* LaunchScreen.storyboard in Resources */,
 				E2C1573F2569365E0045669B /* LaunchScreen.storyboard in Resources */,
-				E2C157562569365E0045669B /* FiraSans-ExtraBold.ttf in Resources */,
 				E2C157352569365E0045669B /* .gitignore in Resources */,
+				9A6DD9AF25750D3000890310 /* README.md in Resources */,
 				E2C157522569365E0045669B /* Assets.xcassets in Resources */,
-				E2C157582569365E0045669B /* FiraSans-Regular.ttf in Resources */,
 				E2C157312569365E0045669B /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,7 +622,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2C157D7256952300045669B /* ListContactUseCase.swift in Sources */,
-				E2C1575C2569365E0045669B /* FiraSans.swift in Sources */,
 				E2C1574C2569365E0045669B /* AppLocalizationManager.swift in Sources */,
 				E2C157C4256941110045669B /* DetailContactViewController.swift in Sources */,
 				E2C1573C2569365E0045669B /* AppDelegate.swift in Sources */,
@@ -673,7 +639,6 @@
 				E2093519256AB54A00C9C0F7 /* AvatarView.swift in Sources */,
 				E20934F7256965AB00C9C0F7 /* ContactListTableCell.swift in Sources */,
 				E2C157912569365F0045669B /* InitialViewModel.swift in Sources */,
-				E2C157872569365F0045669B /* InitialInteractor.swift in Sources */,
 				E2C1575F2569365F0045669B /* AppTheme.swift in Sources */,
 				E2093539256AD8DE00C9C0F7 /* DataSourceEmptyView.swift in Sources */,
 				E2C157382569365E0045669B /* AppConfiguration.swift in Sources */,
@@ -688,7 +653,7 @@
 				E2F00A4B256958D7005157E1 /* ContactModel.swift in Sources */,
 				E2C157852569365F0045669B /* InitialAssembly.swift in Sources */,
 				E2C157B5256940ED0045669B /* ListContactViewModel.swift in Sources */,
-				E2C157752569365F0045669B /* mailru-test-iosRepository.swift in Sources */,
+				E2C157752569365F0045669B /* AppRepository.swift in Sources */,
 				E2C1578D2569365F0045669B /* InitialViewController.swift in Sources */,
 				E2C1573A2569365E0045669B /* AppDefaults.swift in Sources */,
 				E209350C256AB29400C9C0F7 /* PhoneTableCellModel.swift in Sources */,
@@ -698,7 +663,6 @@
 				E2C157502569365E0045669B /* AppAssets.swift in Sources */,
 				E2C157B6256940ED0045669B /* ListContactViewController.swift in Sources */,
 				E2C157662569365F0045669B /* StyleWrapper.swift in Sources */,
-				E2C157732569365F0045669B /* mailru-test-ios.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,19 +871,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E2C157712569365F0045669B /* mailru-test-ios.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E2C157722569365F0045669B /* mailru-test-ios.xcdatamodel */,
-			);
-			currentVersion = E2C157722569365F0045669B /* mailru-test-ios.xcdatamodel */;
-			path = "mailru-test-ios.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E2C157242569365E0045669B /* Project object */;
 }
