@@ -10,7 +10,7 @@
 - Экран детального просмотра контакта.
 ​
 ## Что использовалось​
-- [Язык](https://swift.org)
+- [Swift 5](https://swift.org)
 - [GKViper](https://github.com/GrumpyKir/GKViper)
 - [GKUseCase](https://github.com/GrumpyKir/GKUseCase)
 - [GKRepresentable](https://github.com/GrumpyKir/GKRepresentable)
@@ -49,4 +49,4 @@
 Для успешной сборки проекта требуется выполнить следующие шаги:
 - скопировать проект из репозитория в локальную папку;
 - в консоли открыть папку и выполнить команду `pod install`;
-- открыть проект в `xcode`, выполнить команду `Run`.
+- открыть проект в `Xcode` (рекомендованная версия 12.1), выполнить команду `Run`.
