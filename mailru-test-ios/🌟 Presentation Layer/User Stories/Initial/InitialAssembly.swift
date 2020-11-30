@@ -19,14 +19,10 @@ enum InitialAssembly {
     static func configure(with reference: InitialViewController) -> InitialPresenterInput {
         let presenter = InitialPresenter()
         
-        let interactor = InitialInteractor()
-        interactor._output = presenter
-        
         let router = InitialRouter()
         router._mainController = reference
         
         presenter._view = reference
-        presenter._interactor = interactor
         presenter._router = router
         
         reference._output = presenter

@@ -10,7 +10,7 @@ import GKViper
 
 protocol InitialPresenterInput: ViperPresenterInput { }
 
-class InitialPresenter: ViperPresenter, InitialPresenterInput, InitialViewOutput, InitialInteractorOutput {
+class InitialPresenter: ViperPresenter, InitialPresenterInput, InitialViewOutput {
     
     // MARK: - Props
     fileprivate var view: InitialViewInput? {
@@ -18,13 +18,6 @@ class InitialPresenter: ViperPresenter, InitialPresenterInput, InitialViewOutput
             return nil
         }
         return view
-    }
-    
-    fileprivate var interactor: InitialInteractorInput? {
-        guard let interactor = self._interactor as? InitialInteractorInput else {
-            return nil
-        }
-        return interactor
     }
     
     fileprivate var router: InitialRouterInput? {
@@ -47,7 +40,7 @@ class InitialPresenter: ViperPresenter, InitialPresenterInput, InitialViewOutput
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
         
-        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { [weak self] _ in
+        _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: { [weak self] _ in
             self?.router?.presentMainViewController()
         })
     }
