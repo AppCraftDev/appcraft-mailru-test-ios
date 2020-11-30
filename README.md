@@ -1,6 +1,7 @@
 # appcraft-mailru-test-ios
 
-![](https://github.com/AppCraftDev/appcraft-mailru-test-ios/blob/features/bugfix-3/screencast.gif =250x250)
+![](https://github.com/AppCraftDev/appcraft-mailru-test-ios/blob/features/bugfix-3/screencast.gif) 
+<img src="https://github.com/AppCraftDev/appcraft-mailru-test-ios/blob/features/bugfix-3/screencast.gif" width="100" height="100">
 
 ​
 Приложение для ...
