@@ -11,11 +11,11 @@ import Foundation
 enum AppConfiguration {
     
     static var databaseContainerName: String {
-        return "Riddler"
+        return "mailru-test-ios"
     }
     
     static var serverUrl: String {
-        return "http://192.168.30.39:8000"
+        return ""
     }
     
     static var serverApi: String {

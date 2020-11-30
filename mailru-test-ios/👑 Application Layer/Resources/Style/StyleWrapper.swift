@@ -22,18 +22,6 @@ extension StyleWrapper where Element: UIView {
         }
     }
     
-    static func backgroundContent(alpha: CGFloat = 1.0) -> StyleWrapper {
-        return .wrap { view in
-            view.backgroundColor = AppTheme.backgroundContent(alpha: alpha)
-        }
-    }
-    
-    static func backgroundControl(alpha: CGFloat = 1.0) -> StyleWrapper {
-        return .wrap { view in
-            view.backgroundColor = AppTheme.backgroundControl(alpha: alpha)
-        }
-    }
-    
     static var accentMain: StyleWrapper {
         return .wrap { view in
             view.backgroundColor = AppTheme.accentMain
