@@ -40,7 +40,7 @@ class InitialPresenter: ViperPresenter, InitialPresenterInput, InitialViewOutput
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
         
-        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { [weak self] _ in
+        _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: { [weak self] _ in
             self?.router?.presentMainViewController()
         })
     }
